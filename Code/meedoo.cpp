@@ -1,7 +1,8 @@
 #include <string>
 #include "meedoo.h"
+#include <iostream>
 
-Meedoo::Meedoo(string n): m_name(n) {
+Meedoo::Meedoo(std::string n): m_name(n) {
 m_health = 100;
 m_age = 0; // 0 to 100
 m_hunger = 0;
@@ -10,7 +11,7 @@ m_sickness = 0;
 m_sex = Male;
 }
 
-	// Getters for the Meedoo
+// Getters for the Meedoo
 void Meedoo::getStats() {
 	std::cout << "Meedoo Name:" << m_name << std::endl;
 	switch(m_sex) { 
@@ -20,13 +21,16 @@ void Meedoo::getStats() {
 	std::cout << "Meedoo Age:" << m_age << std::endl;
 	std::cout << "Meedoo Health:" << m_health << std::endl;
 	std::cout << "Meedoo Energy:" << m_energy << std::endl;
-	switch(m_sickness) {
-		case 0 : std::cout << "Meedoo Sickness:" << "Not Sick! :)" << std::endl; break;
-		case 1 : std::cout << "Meedoo Sickness:" << "Sick! :(" << std::endl; break;
+	if (m_sickness == 0) {
+		std::cout << "Meedoo Sickness:" << "Not Sick! :)" << std::endl;
+	}
+	if (m_sickness == 1) {
+		std::cout << "Meedoo Sickness:" << "Sick! :(" << std::endl;
 	}
 }
-	// Destructor
-	Meedoo::~Meedoo() {
+
+// Destructor
+Meedoo::~Meedoo() {
 		// blank for now
 	}
 }
