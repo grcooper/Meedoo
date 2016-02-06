@@ -12,29 +12,11 @@ class Meedoo {
 	Sex m_sex;
 	// Setter for Meedoo's Name
 	public:
-		Meedoo(string n): m_name(n) {
-		m_health = 100;
-		m_age = 0; // 0 to 100
-		m_hunger = 0;
-		m_energy = 100;
-		m_sickness = 0;
-		m_sex = Male;
+		Meedoo(string n) {
 	}
 
 	// Getters for the Meedoo
-	void getStats() const {
-		 cout << "Meedoo Name:" << m_name << endl;
-		 switch(m_sex) { 
-		 	case Male : cout << "Meedoo Sex:" << "Male" << endl; break;
-		 	case Female : cout << "Meedoo Sex:" << "Female" << endl; break;
-		 }
-		 cout << "Meedoo Age:" << m_age << endl;
-		 cout << "Meedoo Health:" << m_health << endl;
-		 cout << "Meedoo Energy:" << m_energy << endl;
-		 switch(m_sickness) {
-		 	case 0 : cout << "Meedoo Sickness:" << "Not Sick! :)" << endl; break;
-			case 1 : cout << "Meedoo Sickness:" << "Sick! :(" << endl; break;
-		 }
+	void getStats() {
 	}
 	// Destructor
 	~Meedoo() {
