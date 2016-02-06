@@ -30,7 +30,4 @@ void Meedoo::getStats() {
 }
 
 // Destructor
-Meedoo::~Meedoo() {
-		// blank for now
-	}
-}
+Meedoo::~Meedoo() {}

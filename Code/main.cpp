@@ -5,7 +5,6 @@
 int main(void){
 
 	Meedoo m("Esther");
-	while( InputHandler::getInstance()->Read(m) ) { }
-
+	while( InputHandler::Read(m) ) { }
 	return 0;
 }

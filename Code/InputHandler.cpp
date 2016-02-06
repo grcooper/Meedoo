@@ -6,19 +6,6 @@
 InputHandler::InputHandler() {}
 InputHandler::~InputHandler() {}
 
-InputHandler* InputHandler::getInstance() {
-	if( m_instance == NULL ) {
-		m_instance = new InputHandler();
-	}
-	return m_instance;
-}
-
-void InputHandler::destroyInstance() {
-	if(m_instance != NULL ){
-		delete m_instance;
-	}
-}
-
 bool InputHandler::Read(Meedoo& m) {
 	std::string input;
 	if( std::cin >> input ) {
