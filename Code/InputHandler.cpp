@@ -1,5 +1,6 @@
 #include <string>
 #include <iosream>
+#include "meedoo.h"
 
 
 InputHandler::InputHandler() {}
@@ -18,7 +19,7 @@ static void InputHandler::destroyInstance() {
 	}
 }
 
-bool InputHandler::Read() {
+bool InputHandler::Read(Meedoo m) {
 	string input;
 	if( cin >> input ) {
 		switch(input) {
@@ -36,6 +37,7 @@ bool InputHandler::Read() {
 
 		case "stats": case "Stats": 
 			cout << "CHECK STATS" << endl;
+			m.getStats();
 			break;
 
 		case "exit": case "Exit":

@@ -3,7 +3,8 @@
 
 int main(void){
 
-	while(InputHandler::getInstance->Read()) { }
+	Meedoo m("Esther");
+	while(InputHandler::getInstance->Read(m)) { }
 
 	return 0;
 }

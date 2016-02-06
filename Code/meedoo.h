@@ -1,6 +1,6 @@
 #include <string>
 
-enum sex {Male, Female};
+enum Sex {Male, Female};
 
 class Meedoo { 
 	const string m_name; 
@@ -9,10 +9,10 @@ class Meedoo {
 	bool m_hunger; // 0 for not hungry, 1 for hungry
 	int m_health; // 0 means dead - 100 means very very healthy
 	int m_energy; // 0 to 100, 0 is need sleep, 1 doesnt need sleep
-	sex m_sex;
+	Sex m_sex;
 	// Setter for Meedoo's Name
 	public:
-		Tammy(string n): m_name(n) {
+		Meedoo(string n): m_name(n) {
 		m_health = 100;
 		m_age = 0; // 0 to 100
 		m_hunger = 0;
@@ -37,7 +37,7 @@ class Meedoo {
 		 }
 	}
 	// Destructor
-	~Tammy() {
+	~Meedoo() {
 		// blank for now
 	}
 }
