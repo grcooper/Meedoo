@@ -6,7 +6,7 @@
 InputHandler::InputHandler() {}
 InputHandler::~InputHandler() {}
 
-void InputHandler::getInstance() {
+InputHandler* InputHandler::getInstance() {
 	if( m_instance == NULL ) {
 		m_instance = new InputHandler();
 	}
@@ -20,13 +20,12 @@ void InputHandler::destroyInstance() {
 }
 
 bool InputHandler::Read(Meedoo& m) {
-	string input;
+	std::string input;
 	if( std::cin >> input ) {
 		if(input == "feed" || input == "Feed") {
 			std::cout << "FEED HERE" << std::endl;
-			break;
 		}
-		else if( intput == "clean" || input == "Clean") {
+		else if( input == "clean" || input == "Clean") {
 			std::cout << "CLEAN HERE" << std::endl;
 		}
 		else if( input == "medicine" || input == "Medicine") {

@@ -10,6 +10,7 @@ private:
 	~InputHandler();
 public:
 	static InputHandler* getInstance();
+	static void destroyInstance();
 	bool Read(Meedoo& m);
 };
 
