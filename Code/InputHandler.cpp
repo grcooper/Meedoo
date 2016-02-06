@@ -21,46 +21,39 @@ void InputHandler::destroyInstance() {
 
 bool InputHandler::Read(Meedoo& m) {
 	string input;
-	if( cin >> input ) {
-		switch(input) {
-		case "feed": case "Feed":
-			cout << "FEED HERE" << endl;
+	if( std::cin >> input ) {
+		if(input == "feed" || input == "Feed") {
+			std::cout << "FEED HERE" << std::endl;
 			break;
-
-		case "clean": case "Clean":
-			cout << "CLEAN HERE" << endl;
-			break;
-
-		case "medicine": case "Medicine":
-			cout << "GIVE MEDICINE" << endl;
-			break;
-
-		case "stats": case "Stats": 
-			cout << "CHECK STATS" << endl;
+		}
+		else if( intput == "clean" || input == "Clean") {
+			std::cout << "CLEAN HERE" << std::endl;
+		}
+		else if( input == "medicine" || input == "Medicine") {
+			std::cout << "GIVE MEDICINE" << std::endl;
+		}
+		else if( input == "stats" || input == "Stats" ) { 
+			std::cout << "CHECK STATS" << std::endl;
 			m.getStats();
-			break;
-
-		case "exit": case "Exit":
-			cout << "Exiting" << endl;
+		}
+		else if( input == "exit" || input == "Exit" ) {
+			std::cout << "Exiting" << std::endl;
 			return false;
-			break;
-
-		case "help": case "Help":
-			cout << "Commands: " << endl;
-			cout << " - feed" << endl;
-			cout << " - clean" << endl;
-			cout << " - medicine" << endl;
-			cout << " - stats" << endl << endl;
-			cout << " - exit" << endl;
-			break;
-
-		default:
-			cout << "Type help to see list of commands" << endl;
-			break;
+		}
+		else if( input == "help" || input == "Help" ) {
+			std::cout << "Commands: " << std::endl;
+			std::cout << " - feed" << std::endl;
+			std::cout << " - clean" << std::endl;
+			std::cout << " - medicine" << std::endl;
+			std::cout << " - stats" << std::endl << std::endl;
+			std::cout << " - exit" << std::endl;
+		}
+		else {
+			std::cout << "Type help to see list of commands" << std::endl;
 		}
 	}
 	else {
-		cerr << "Input Failed" << endl << endl;
+		std::cerr << "Input Failed" << std::endl << std::endl;
 	}
 	return true;
 }
