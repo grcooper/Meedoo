@@ -1,3 +1,7 @@
+#ifndef INPUTHANDLER_H
+#define INPUTHANDLER_H
+
+#include "meedoo.h"
 
 class InputHandler {
 private:	
@@ -6,5 +10,7 @@ private:
 	~InputHandler();
 public:
 	static InputHandler* getInstance();
-	bool Read();
+	bool Read(Meedoo& m);
 };
+
+#endif

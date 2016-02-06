@@ -1,9 +1,12 @@
+#ifndef MEEDOO_H
+#define MEEDOO_H
+
 #include <string>
 
 enum Sex {Male, Female};
 
 class Meedoo { 
-	const string m_name; 
+	const std::string m_name; 
 	bool m_sickness; // 0 for not sick, 1 for sick
 	int m_age; // combine with health? 
 	bool m_hunger; // 0 for not hungry, 1 for hungry
@@ -12,14 +15,12 @@ class Meedoo {
 	Sex m_sex;
 	// Setter for Meedoo's Name
 	public:
-		Meedoo(string n) {
-	}
+		Meedoo(std::string n);
 
 	// Getters for the Meedoo
-	void getStats() {
-	}
+	void getStats();
 	// Destructor
-	~Meedoo() {
-		// blank for now
-	}
-}
+	~Meedoo();
+};
+
+#endif

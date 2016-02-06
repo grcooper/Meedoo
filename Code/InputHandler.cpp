@@ -1,25 +1,25 @@
 #include <string>
-#include <iosream>
+#include <iostream>
+#include "InputHandler.h"
 #include "meedoo.h"
-
 
 InputHandler::InputHandler() {}
 InputHandler::~InputHandler() {}
 
-static void InputHandler::getInstance() {
+void InputHandler::getInstance() {
 	if( m_instance == NULL ) {
 		m_instance = new InputHandler();
 	}
 	return m_instance;
 }
 
-static void InputHandler::destroyInstance() {
+void InputHandler::destroyInstance() {
 	if(m_instance != NULL ){
 		delete m_instance;
 	}
 }
 
-bool InputHandler::Read(Meedoo m) {
+bool InputHandler::Read(Meedoo& m) {
 	string input;
 	if( cin >> input ) {
 		switch(input) {
