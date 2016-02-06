@@ -12,17 +12,17 @@ m_sex = Male;
 
 	// Getters for the Meedoo
 void Meedoo::getStats() {
-	std::cout << "Meedoo Name:" << m_name << endl;
+	std::cout << "Meedoo Name:" << m_name << std::endl;
 	switch(m_sex) { 
-	 	case Male : std::cout << "Meedoo Sex:" << "Male" << endl; break;
-	 	case Female : std::cout << "Meedoo Sex:" << "Female" << endl; break;
+	 	case Male : std::cout << "Meedoo Sex:" << "Male" << std::endl; break;
+	 	case Female : std::cout << "Meedoo Sex:" << "Female" << std::endl; break;
 	}
-	std::cout << "Meedoo Age:" << m_age << endl;
-	std::cout << "Meedoo Health:" << m_health << endl;
-	std::cout << "Meedoo Energy:" << m_energy << endl;
+	std::cout << "Meedoo Age:" << m_age << std::endl;
+	std::cout << "Meedoo Health:" << m_health << std::endl;
+	std::cout << "Meedoo Energy:" << m_energy << std::endl;
 	switch(m_sickness) {
-		case 0 : std::cout << "Meedoo Sickness:" << "Not Sick! :)" << endl; break;
-		case 1 : std::cout << "Meedoo Sickness:" << "Sick! :(" << endl; break;
+		case 0 : std::cout << "Meedoo Sickness:" << "Not Sick! :)" << std::endl; break;
+		case 1 : std::cout << "Meedoo Sickness:" << "Sick! :(" << std::endl; break;
 	}
 }
 	// Destructor
